@@ -1,0 +1,16 @@
+<nav>
+  <a routerLink="/">
+    <img src="assets/images/logo.svg">
+  </a>
+  <div class="flex-row space-between">
+    <div>
+      <a routerLink="/">News</a>
+      <a routerLink="/posts">Posts</a>
+    </div>
+    <a routerLink="/login" *ngIf="!user?.username">Login</a>
+    <div *ngIf="user?.username" class="user-block">
+      <span class="light"> Welcome <span class="blue"> {{user?.username}}! </span></span>
+      <a (click)="logout()">Logout</a>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,30 @@
+@import "../../../../assets/themes/variables";
+
+main {
+  background-color: $light-gray;
+  margin: 0 auto;
+  width: 60%;
+  padding-top: 3rem;
+}
+
+main > div:first-child {
+  text-align: center;
+}
+main > div:last-child {
+  margin-top: 3rem;
+}
+
+div {
+  margin: 1rem 0;
+  align-items: center;
+}
+
+img {
+  width: 70px;
+  height: 76px;
+  margin-right: 1rem;
+}
+
+hr {
+  margin-top: 2rem;
+}

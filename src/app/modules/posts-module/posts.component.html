@@ -1,0 +1,53 @@
+<div class="wrapper">
+  <div class="text-center">
+    <h2> Welcome to Company&Co Blog</h2>
+    <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState = true"
+                           (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Create new post
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <form [formGroup]="postForm" (ngSubmit)="createNewPost()">
+          <mat-form-field appearance="fill">
+            <mat-label>Title</mat-label>
+            <input matInput formControlName="title">
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Post Text</mat-label>
+            <textarea matInput formControlName="body"></textarea>
+          </mat-form-field>
+          <button mat-flat-button color="primary" [disabled]="postForm.invalid">Create post</button>
+        </form>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+  <div class="body-container">
+    <mat-card *ngFor="let post of posts">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{post?.title}}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="assets/images/bg.jpeg">
+      <mat-card-content>
+        <p>
+          {{post?.body}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions *ngIf="post?.userId === user?.id">
+        <button mat-button color="warn" (click)="deleteOnlyMyPost(post?.id)">delete your post</button>
+      </mat-card-actions>
+      <div>
+        <hr>
+        <h4>Comments:</h4>
+        <div *ngFor="let item of displayComments(post?.id)">
+          <div>
+            <p class="blue">{{item?.email}}</p>
+            <div class="light">{{item?.body}}</div>
+          </div>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>

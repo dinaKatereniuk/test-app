@@ -1,0 +1,31 @@
+@import "../../../../assets/themes/variables";
+
+nav {
+  padding: 1rem 3rem;
+  background-color: $primary;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  margin-right: 1rem;
+
+  &:hover, &:active {
+    color: $secondary;
+  }
+}
+
+span {
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+
+
+.user-block {
+  margin-left: 4rem;
+}

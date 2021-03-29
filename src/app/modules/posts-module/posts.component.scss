@@ -1,0 +1,30 @@
+mat-card {
+  width: 500px;
+  margin: 2rem;
+}
+
+.body-container{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.text-center {
+  text-align: center;
+  padding: 2rem;
+}
+
+form , mat-panel-title{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 25%;
+}
+
+mat-expansion-panel {
+  text-align: center;
+}
+
+.wrapper {
+  margin: 0 auto;
+}

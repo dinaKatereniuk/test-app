@@ -1,0 +1,18 @@
+@import "../../../../assets/themes/variables";
+
+form {
+  padding-top: 5%;
+  margin: 0 auto;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+div {
+  text-align: center;
+  padding: 1rem;
+  background-color: $primary;
+  color: gray;
+  margin-bottom: 1rem;
+}
